@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { UsuarioService } from '../servicio/usuario.service';
-import { Usuario } from '../interfaces/interfas_usuario';
+import { UsuarioService } from '../../../servicio/usuario.service';
+import { Usuario } from '../../../interfaces/interfas_usuario';
 
 @Component({
   selector: 'body',

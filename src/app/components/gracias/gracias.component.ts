@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UsuarioService } from '../servicio/usuario.service';
+import { UsuarioService } from '../../servicio/usuario.service';
 
 @Component({
   selector: 'app-gracias',
@@ -46,6 +46,13 @@ export class GraciasComponent implements OnInit {
 
   constructor(private http: HttpClient, private usuarioService: UsuarioService) {}
 ngOnInit() {
+    const token = localStorage.getItem('token');
+     if (!token) {
+    
+    alert('Acceso denegado. Primero regístrate.');
+    window.location.href = '/'; 
+    return;
+  }
   this.usuarioService.obtenerUsuarios().subscribe({
     next: data => this.usuarios = data,
     error: err => console.error('Error al cargar usuarios:', err)

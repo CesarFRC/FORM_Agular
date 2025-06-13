@@ -2,8 +2,8 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
-import { RegistroComponent } from './app/registro/registro.component';
-import { GraciasComponent } from './app/gracias/gracias.component';
+import { RegistroComponent } from '../src/app/components/registro/registro.component';
+import { GraciasComponent } from '../src/app/components/gracias/gracias.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
